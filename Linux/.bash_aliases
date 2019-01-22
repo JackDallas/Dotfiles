@@ -30,3 +30,6 @@ hibp() {
             }
 #weather
 alias weather='curl wttr.in'
+
+#Copy file contents to clipboard
+alias ftc='function _blah(){ more "$1" | xclip -selection clipboard; }; _blah'
