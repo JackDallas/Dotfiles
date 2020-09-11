@@ -4,11 +4,11 @@ if [ "$#" -ne 1 ]; then
     echo "Need 1 arg gitcred <work|home>"
 fi
 
-if [ "$1" -e "home" ]; then
+if [ "$1" = "home" ]; then
   echo "Setting up home git credentials"
   git config user.name "Jack Dallas"
   git config user.email "3620144+JackDallas@users.noreply.github.com"
-else if [ "$1" -e "work" ]; then
+elif [ "$1" = "work" ]; then
   echo "Setting up work git credentials"
   git config user.name "Jack Dallas"
   git config user.email "jack.dallas@vcatechnology.com"

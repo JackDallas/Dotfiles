@@ -21,15 +21,3 @@ alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-
 
 #nc server
 alias ncserver="nc -l -k -p 1234"
-
-alias rm=trash
-
-#hibp
-hibp() {
-        curl -fsS "https://haveibeenpwned.com/api/v2/breachedaccount/$1" | jq -r 'sort_by(.BreachDate)[] | [.Title,.Domain,.BreachDate,.PwnCount] | @tsv' | column -t -s$'\t'
-            }
-#weather
-alias weather='curl wttr.in'
-
-#Copy file contents to clipboard
-alias ftc='function _blah(){ more "$1" | xclip -selection clipboard; }; _blah'
