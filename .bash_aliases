@@ -21,3 +21,6 @@ alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-
 
 #nc server
 alias ncserver="nc -l -k -p 1234"
+
+bind '"\e[B": history-search-forward'
+bind '"\e[A": history-search-backward'
