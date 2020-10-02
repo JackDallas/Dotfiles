@@ -14,5 +14,10 @@ do
   ln -svf "${file}" ~/.local/bin
 done
 
+sudo apt install -y tar rar zip unzip libssl-dev libssl-dev git
 
-sudo apt install -y tar rar zip unzip 
+if cargo version; then
+  cargo install cargo-edit cargo-outdated cargo-tree cargo-update cargo-audit
+fi
+
+git config --global push.default current
