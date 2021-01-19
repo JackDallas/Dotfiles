@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$#" -ne 1 ]; then
-    echo "Need 1 arg gitcred <work|home>"
+    echo "Need 1 arg gitcred <work|home|srht>"
 fi
 
 if [ "$1" = "home" ]; then
@@ -12,6 +12,10 @@ elif [ "$1" = "work" ]; then
   echo "Setting up work git credentials"
   git config user.name "Jack Dallas"
   git config user.email "jack.dallas@vcatechnology.com"
+elif [ "$1" = "srht" ]; then
+  echo "Setting up sr.ht git credentials"
+  git config user.name "Dallas"
+  git config user.email "me@dallasthe.dev"
 else
-  echo "Location $1 not found, args taken are <work|home>"
+  echo "Location $1 not found, args taken are <work|home|srht>"
 fi
