@@ -3,7 +3,7 @@
 INSTALL_DIR=$(pwd);
 
 if [ ! -d "$HOME/.local/bin" ]; then
-  mkdir "$HOME/.local/bin"
+  mkdir -p "$HOME/.local/bin"
 fi
 
 ln -svf "$INSTALL_DIR/.bash_aliases" ~
