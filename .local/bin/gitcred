@@ -8,14 +8,10 @@ if [ "$1" = "home" ]; then
   echo "Setting up home git credentials"
   git config user.name "Jack Dallas"
   git config user.email "3620144+JackDallas@users.noreply.github.com"
-elif [ "$1" = "work" ]; then
-  echo "Setting up work git credentials"
-  git config user.name "Jack Dallas"
-  git config user.email "jack.dallas@vcatechnology.com"
 elif [ "$1" = "srht" ]; then
   echo "Setting up sr.ht git credentials"
   git config user.name "Dallas"
   git config user.email "me@dallasthe.dev"
 else
-  echo "Location $1 not found, args taken are <work|home|srht>"
+  echo "Location $1 not found, args taken are <home|srht>"
 fi

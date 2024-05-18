@@ -16,8 +16,4 @@ done
 
 sudo apt install -y tar rar zip unzip libssl-dev libssl-dev git
 
-if cargo version; then
-  cargo install cargo-edit cargo-outdated cargo-tree cargo-update cargo-audit
-fi
-
 git config --global push.default current
