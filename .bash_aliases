@@ -1,4 +1,8 @@
-#Alias'
+#!/bin/bash
+
+# Add our bin to path
+export PATH="$PATH:$HOME/.local/bin"
+
 # Clear shortcut
 alias cls='clear'
 
@@ -22,5 +26,8 @@ alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-
 #nc server
 alias ncserver="nc -l -k -p 1234"
 
-bind '"\e[B": history-search-forward'
-bind '"\e[A": history-search-backward'
+# Only run on bash
+if [ -n "$BASH_VERSION" ]; then
+  bind '"\e[B": history-search-forward'
+  bind '"\e[A": history-search-backward'
+fi
