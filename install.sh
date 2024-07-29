@@ -14,6 +14,5 @@ do
   ln -svf "${file}" ~/.local/bin
 done
 
-sudo apt install -y tar zip unzip libssl-dev libssl-dev git
-
 git config --global push.default current
+git config --global push.autoSetupRemote true
